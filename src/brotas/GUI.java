@@ -1,4 +1,4 @@
-package brotas;
+package brotas; 
 
 public class GUI{
 
