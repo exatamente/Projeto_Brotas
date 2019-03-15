@@ -26,13 +26,7 @@ public class User{
   public void recomendaDieta(){
     
   }
-  
-
-
-
-  /*void recomendacoes(){
-
-    if(getGlicemia() < 70){
+ 
 
       System.out.println("Taxa de jejum abaixo, cuidado aumente o consumo de carboidratos.");
     }
