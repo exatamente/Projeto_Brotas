@@ -17,10 +17,12 @@ class Main {
   public static void main(String[] args) {
     
       
-      System.out.printf("Bem vindo ao Diabetech, seu aplicativo de monitoramento!");
-      System.out.printf("Nossa motivação é a sua preocupação.");
-      System.out.printf("Carregando a tela de login...");
+      System.out.printf("Bem vindo ao Diabetech, seu aplicativo de monitoramento!\n");
+      System.out.printf("Nossa motivação é a sua preocupação.\n");
+      System.out.printf("Carregando a tela de login...\n");
       Usuario u1 = new Usuario();
+      u1.pegaDados();
+      u1.mostraIMC(u1.getPeso(),u1.getAltura());
       
     /*
     PARA TESTES

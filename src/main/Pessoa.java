@@ -13,19 +13,22 @@ public class Pessoa {
     Scanner input = new Scanner(System.in);
     
     private String nome;
+    private String sobrenome;
     private int idade;
     private double peso;
     private double altura;
     
     
     Pessoa(){
-        System.out.printf("Digite o nome da pessoa:\n");
+        System.out.printf("Digite o seu primero nome:\n");
         this.nome = input.nextLine();
-        System.out.printf("Digite a idade da pessoa:\n");
+        System.out.printf("Digite o seu sobrenome:\n");
+        this.sobrenome = input.nextLine();
+        System.out.printf("Digite a sua idade:\n");
         this.idade = input.nextInt();
-        System.out.printf("Digite o peso da pessoa:\n");
+        System.out.printf("Digite o seu peso:\n");
         this.peso = input.nextDouble();
-        System.out.printf("Digite a altura da pessoa:\n");
+        System.out.printf("Digite a sua altura:\n");
         this.peso = input.nextDouble();
         System.out.println(" ");
     }
@@ -43,6 +46,14 @@ public class Pessoa {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+    
+    public String getSobrenome() {
+        return sobrenome;
+    }
+
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
     }
 
     public int getIdade() {

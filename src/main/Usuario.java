@@ -37,8 +37,9 @@ public class Usuario extends Pessoa{
   private boolean aplicouInsulina; 
   
   /* calcularIMC() utiliza o peso e a altura do usuário fornecidas anteriormente para o calculo do IMC(Índice de Massa Muscular).*/
-  public void calcularIMC(){
-    double imc = getPeso()/(getAltura()*getAltura());
+  public void mostraIMC(double peso,double altura){
+    double imc = peso/(altura*altura);
+    System.out.printf("Seu Indíce de Massa Muscular ideal é igual a: %.2f\n", imc);
   }
 
   /* coletaAtivFis() resgata diariamente a quantidade/medida de atividade praticada pelo usuário. */
@@ -65,15 +66,6 @@ public class Usuario extends Pessoa{
       senha = input.nextLine();
       System.out.printf("Digite o seu número de telefone:\n");
       telefone = input.nextLine();
-      System.out.printf("Digite o seu nome completo:\n");
-      setNome(input.nextLine());
-      System.out.printf("Digite a sua altura:\n");
-      setAltura(input.nextDouble());
-      System.out.printf("Digite o seu peso:\n");
-      setPeso(input.nextDouble());
-      System.out.printf("Digite a sua idade:\n");
-      setIdade(input.nextInt());
-      System.out.println(" ");
   }
 
 
