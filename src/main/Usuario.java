@@ -6,9 +6,9 @@ Classe Usuario instancia o usuario assim como os metodos para operações intern
 */
 
 package main;
-public class User{
+public class Usuario extends Pessoa{
   //Parâmetros: String nome,int idade, float peso, float altura
-  User(){
+  Usuario(){
     /*
     Ver.:0.4
 
@@ -18,18 +18,23 @@ public class User{
     
     */
     
+    super();
+    
     
   }
-  private String nome;
-  private float peso;
-  private float altura;
-  private int idade;
+
+  private String email;
+  private String login;
+  private String senha;
+  private String telefone;
+  
+  
   private float glicemia; //taxa de açucar
   private boolean aplicouInsulina; 
   
   /* calcularIMC() utiliza o peso e a altura do usuário fornecidas anteriormente para o calculo do IMC(Índice de Massa Muscular).*/
   public void calcularIMC(){
-    float imc = peso/(altura*altura);
+    double imc = getPeso()/(getAltura()*getAltura());
   }
 
   /* coletaAtivFis() resgata diariamente a quantidade/medida de atividade praticada pelo usuário. */
@@ -72,17 +77,6 @@ public class User{
     this.glicemia = glicemia;
   }
 
-  public void setPeso(float peso){
-    this.peso = peso;
-  }
-
-  public void setAltura(float altura){
-    this.altura = altura;
-  }
-
-  public void setIdade(int idade){
-    this.idade = idade;
-  }
   //FIM DOS GETTERS E SETTERS
   
 }
