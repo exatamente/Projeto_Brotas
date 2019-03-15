@@ -6,7 +6,11 @@ Classe Usuario instancia o usuario assim como os metodos para operações intern
 */
 
 package main;
+
+import java.util.Scanner;
+
 public class Usuario extends Pessoa{
+    Scanner input = new Scanner(System.in);
   //Parâmetros: String nome,int idade, float peso, float altura
   Usuario(){
     /*
@@ -51,32 +55,67 @@ public class Usuario extends Pessoa{
   public void recomendaDieta(){
     
   }
+  
+  public void pegaDados(){
+      System.out.printf("Digite o seu email:\n");
+      email = input.nextLine();
+      System.out.printf("Digite o seu login:\n");
+      login = input.nextLine();
+      System.out.printf("Digite uma senha:(Você precisará dela para realizar login)\n");
+      senha = input.nextLine();
+      System.out.printf("Digite o seu número de telefone:\n");
+      telefone = input.nextLine();
+      System.out.printf("Digite o seu nome completo:\n");
+      setNome(input.nextLine());
+      System.out.printf("Digite a sua altura:\n");
+      setAltura(input.nextDouble());
+      System.out.printf("Digite o seu peso:\n");
+      setPeso(input.nextDouble());
+      System.out.printf("Digite a sua idade:\n");
+      setIdade(input.nextInt());
+      System.out.println(" ");
+  }
 
-  /*void recomendacoes(){
 
-    if(getGlicemia() < 70){
-
-      System.out.println("Taxa de jejum abaixo, cuidado aumente o consumo de carboidratos.");
-    }
-
-    else if(getGlicemia() <= 110 && getGlicemia() >= 70){
-      System.out.println("Taxa de jejum normal, tome cuidado e mantenha uma alimentação saúdavel.");
-    }
-
-    else if(getGlicemia() > 110 && getGlicemia() <= 125){
-      System.out.println("Taxa de jejum alterada, diminua o consumo de carboidratos.");
-    }
-
-    else if(getGlicemia() > 125){
-      System.out.println("Procure um médico imediatamente, glicemia muito acima do normal.");
-    }
-  }*/
 
   //GETTERS e SETTERS
   public void setGlicemia(float glicemia){
     this.glicemia = glicemia;
   }
+  
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+  
+      
 
   //FIM DOS GETTERS E SETTERS
-  
 }

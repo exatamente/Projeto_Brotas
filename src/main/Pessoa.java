@@ -65,7 +65,7 @@ public class Pessoa {
         return altura;
     }
 
-    public void setAltura(float altura) {
+    public void setAltura(double altura) {
         this.altura = altura;
     }
     

@@ -13,11 +13,15 @@ Description Summary: Diabetes monitoring application.
 Version: 0.4
 */
 package main;
-import java.util.Scanner;
-//Classe Principal onde o programa será rodado.
 class Main {
   public static void main(String[] args) {
     
+      
+      System.out.printf("Bem vindo ao Diabetech, seu aplicativo de monitoramento!");
+      System.out.printf("Nossa motivação é a sua preocupação.");
+      System.out.printf("Carregando a tela de login...");
+      Usuario u1 = new Usuario();
+      
     /*
     PARA TESTES
     Scanner input = new Scanner(System.in);
