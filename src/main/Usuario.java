@@ -38,7 +38,7 @@ public class Usuario extends Pessoa{
   
   /* calcularIMC() utiliza o peso e a altura do usuário fornecidas anteriormente para o calculo do IMC(Índice de Massa Muscular).*/
   public void mostraIMC(double peso,double altura){
-    double imc = peso/(altura*altura);
+    double imc = peso/Math.pow(altura, 2);
     System.out.printf("Seu Indíce de Massa Muscular ideal é igual a: %.2f\n", imc);
   }
 
