@@ -36,7 +36,7 @@ class Main {
       
       db.Users.get(0).pegaDados();
       db.Users.get(0).mostraIMC(db.Users.get(0).getPeso(),db.Users.get(0).getAltura());
-      //aaaaaaaaaaaaaaaaaaaaaaa
+      //aaaaaaaaaaaaaaaa
     /*
     PARA TESTES
     Scanner input = new Scanner(System.in);
