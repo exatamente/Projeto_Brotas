@@ -35,7 +35,7 @@ class Main {
       Scanner menu = new Scanner(System.in);
       int choice;
         do {
-            menu();
+            //menu();
             choice = menu.nextInt();
             // ...
         } while(choice != 4);
