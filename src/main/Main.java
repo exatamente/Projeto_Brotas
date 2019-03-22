@@ -16,7 +16,12 @@ package main;
 class Main {
   public static void main(String[] args) {
     
-      
+      /* 
+       * As estruturas de dados ajudam no armazenamento de informações, de algumas formas específicas como
+       * lista, pilha, vetor, etc.
+       * O Arraylist é uma classe que vai ser utilizada para criação do banco de dados do usuário, com
+       * implementação no aplicativo de forma a salvar os dados do programa a fins de calcular o progresso periódico do usuário.
+       */ 
       System.out.printf("Bem vindo ao Diabetech, seu aplicativo de monitoramento!\n");
       System.out.printf("Nossa motivação é a sua preocupação.\n");
       System.out.printf("Carregando a tela de login...\n");
