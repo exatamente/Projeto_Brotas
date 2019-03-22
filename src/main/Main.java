@@ -13,6 +13,10 @@
 *Version: 0.4
 */
 package main;
+
+
+import java.util.Scanner;
+
 class Main {
   public static void main(String[] args) {
     
@@ -28,6 +32,14 @@ class Main {
       System.out.printf("Nossa motivação é a sua preocupação.\n");
       System.out.printf("Carregando a tela de login...\n");
       System.out.printf("NOTA: Adicionar tela de login...\n");
+      Scanner menu = new Scanner(System.in);
+      int choice;
+        do {
+            menu();
+            choice = menu.nextInt();
+            // ...
+        } while(choice != 4);
+      
       //Adicionar seção de login. by: Matheus
       
       
@@ -55,12 +67,16 @@ class Main {
     paciente.setGlicemia(glicemia);
     paciente.setPeso(peso);
     */
-    
+
 
     // construtor App() instancia todas as outras classes contruindo a aplicação
     //App();
 
 
   }
+  /*public static void menu(){
+  System.out.println("Seja bem vindo usuário" + Por favor, escolha uma opção...\n");      
+  System.out.println("1 - \n");      
+  }*/
 }
 
