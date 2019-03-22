@@ -16,7 +16,9 @@ package main;
 class Main {
   public static void main(String[] args) {
     
-      /* 
+      /**
+       * @RenanMartins
+      
        * As estruturas de dados ajudam no armazenamento de informações, de algumas formas específicas como
        * lista, pilha, vetor, etc.
        * O Arraylist é uma classe que vai ser utilizada para criação do banco de dados do usuário, com
