@@ -3,7 +3,7 @@
  */
 package main;
 
-import java.awt.List;
+import java.util.ArrayList;
 
 /**
  *
@@ -29,7 +29,12 @@ public class Database {
     }
     
     String tipos[] = {"Users"};
-
+    ArrayList <Usuario> Users = new ArrayList<>();
+    
     private String tipo;
     private int i=0,teste=0;
+    
+    public void criaPessoa(){
+        Users.add(new Usuario());
+    }
 }

@@ -27,9 +27,15 @@ class Main {
       System.out.printf("Bem vindo ao Diabetech, seu aplicativo de monitoramento!\n");
       System.out.printf("Nossa motivação é a sua preocupação.\n");
       System.out.printf("Carregando a tela de login...\n");
-      Usuario u1 = new Usuario();
-      u1.pegaDados();
-      u1.mostraIMC(u1.getPeso(),u1.getAltura());
+      System.out.printf("NOTA: Adicionar tela de login...\n");
+      //Adicionar seção de login. by: Matheus
+      
+      
+      //Iniciando Banco de Dados
+      Database db = new Database("Users");
+      
+      db.Users.get(0).pegaDados();
+      db.Users.get(0).mostraIMC(db.Users.get(0).getPeso(),db.Users.get(0).getAltura());
       
     /*
     PARA TESTES
