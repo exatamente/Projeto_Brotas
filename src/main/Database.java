@@ -19,7 +19,7 @@ public class Database {
         this.tipo = tipo;
     }
     List tipos = new List(2);
-    //aaaa
+    //a
     
     private String tipo;
 }
