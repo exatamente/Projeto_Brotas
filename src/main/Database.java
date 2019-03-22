@@ -15,11 +15,21 @@ public class Database {
         
     }
     public Database(String tipo){
+        for(i=0;i<tipos.length;i++){
+            if(tipo == tipos[i]){
+                this.tipo = tipo;
+                this.teste = 1;
+                return;
+            }
+            if(teste ==1){
+                System.out.println("Erro de Database... Contate a central da Diabetech!!!\n");
+            }
+        }
         
-        this.tipo = tipo;
     }
-    List tipos = new List(2);
-    //a
     
+    String tipos[] = {"Users"};
+
     private String tipo;
+    private int i=0,teste=0;
 }
