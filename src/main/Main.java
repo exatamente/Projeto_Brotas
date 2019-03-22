@@ -1,16 +1,16 @@
-/*
-@EdgarGomes(exatamente) - code Owner 
-@MatheusElias - coder , project idealizer
-@JuanManuel(Juan_Pascual) - idea developer
-@RenanMartins(RenanMartins2) - co-coder
-
-Projeto Brotas
-Resumo de Descrição: Aplicativo para monitoramento de diabetes.
-Versão:  0.4
-
-Project Brotas
-Description Summary: Diabetes monitoring application.
-Version: 0.4
+/**
+*@EdgarGomes(exatamente) - code Owner 
+*@MatheusElias - coder , project idealizer
+*@JuanManuel(Juan_Pascual) - idea developer
+*@RenanMartins(RenanMartins2) - co-coder
+*
+*Projeto Brotas
+*Resumo de Descrição: Aplicativo para monitoramento de diabetes.
+*Versão:  0.4
+*
+*Project Brotas
+*Description Summary: Diabetes monitoring application.
+*Version: 0.4
 */
 package main;
 class Main {
