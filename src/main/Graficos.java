@@ -1,11 +1,14 @@
 /*
-@MatheusElias - coder
-
-Classe responsável por desenhar elementos graficos.
-Ver.:0.4
-*/
+ * 
+ */
 
 package main;
+/**
+ * 
+ * Classe responsável por desenhar elementos graficos.
+ * @author MatheusElias - coder
+ * @version .:0.05
+*/
 public class Graficos{
 
   Graficos(){

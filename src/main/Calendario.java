@@ -1,9 +1,14 @@
 /*
-  @MatheusElias - coder
+ * 
+ */
 
-  classe para criar uma plataforma que auxilie o usuário a gerenciar sua atividade e desenvolvimento.
-*/
 package main;
+/**
+ * Classe para criar uma plataforma que auxilie o usuário a gerenciar sua atividade e desenvolvimento.
+ * @author MatheusElias - coder
+ *  
+ * 
+ */
 public class Calendario{
   private int dia;
   private int mes;

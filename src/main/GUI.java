@@ -1,11 +1,11 @@
-/*
-@MatheusElias - coder
-
-Classe GUI estende a classe Graficos.java contendo métodos para instanciar e manipular as janelas.
-
-*/
+/**
+ * 
+ */
 package main;
-
+/**
+ * Classe GUI estende a classe Graficos.java contendo métodos para instanciar e manipular as janelas.
+ * @author MatheusElias - coder
+*/
 public class GUI{
 
   GUI(){

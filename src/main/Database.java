@@ -1,8 +1,12 @@
-/*
- * Classe para funcionar como o banco de dados do sistema ou um conector para o banco de dados
+/**
+ * 
  */
 package main;
-
+/**
+ * 
+ * Classe para funcionar como o banco de dados do sistema ou um conector para o banco de dados
+ * @author MatheusElias - coder
+ */
 import java.util.ArrayList;
 
 /**
