@@ -1,16 +1,17 @@
 /**
-*@EdgarGomes(exatamente) - code Owner 
-*@MatheusElias - coder , project idealizer
-*@JuanManuel(Juan_Pascual) - idea developer
-*@RenanMartins(RenanMartins2) - co-coder
-*
 *Projeto Brotas
 *Resumo de Descrição: Aplicativo para monitoramento de diabetes.
 *Versão:  0.4
 *
 *Project Brotas
 *Description Summary: Diabetes monitoring application.
-*Version: 0.4
+*Version: 0.4 
+*
+*@EdgarGomes(exatamente) - code Owner 
+*@MatheusElias - coder , project idealizer
+*@JuanManuel(Juan_Pascual) - idea developer
+*@RenanMartins(RenanMartins2) - co-coder
+*
 */
 package main;
 
@@ -32,12 +33,15 @@ class Main {
       System.out.printf("Nossa motivação é a sua preocupação.\n");
       System.out.printf("Carregando a tela de login...\n");
       System.out.printf("NOTA: Adicionar tela de login...\n");
-      Scanner menu = new Scanner(System.in);
-      int choice;
+      Scanner input = new Scanner(System.in);
+      int choice = 0;
         do {
-            //menu();
-            choice = menu.nextInt();
-            // ...
+            printMenuLogin();
+            choice = input.nextInt();
+            switch(choice){
+                case 1:
+                    
+            }
         } while(choice != 4);
       
       //Adicionar seção de login. by: Matheus
@@ -74,9 +78,12 @@ class Main {
 
 
   }
-  /*public static void menu(){
-  System.out.println("Seja bem vindo usuário" + Por favor, escolha uma opção...\n");      
-  System.out.println("1 - \n");      
-  }*/
+  public static void printMenuLogin(){
+  System.out.println("Seja bem vindo usuário. Por favor, escolha uma opção...\n");      
+  System.out.println("1 -  Cadastro de usuário.\n");      
+  System.out.println("2 -  Login de usuário.\n");
+  System.out.println("3 -  Login anônimo.\n");
+  System.out.println("4 -  Sair.\n");
+  }
 }
 
