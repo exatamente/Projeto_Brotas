@@ -9,7 +9,7 @@ package main;
 
 import java.util.Scanner;
 
-public class Usuario extends Pessoa{
+public class Usuario extends Pessoa implements Alimentacao{
     Scanner input = new Scanner(System.in);
   //Parâmetros: String nome,int idade, float peso, float altura
   Usuario(){
@@ -31,7 +31,7 @@ public class Usuario extends Pessoa{
   private String login;
   private String senha;
   private String telefone;
-  
+  private double resultados;
   
   private float glicemia; //taxa de açucar
   private boolean aplicouInsulina; 
@@ -46,18 +46,34 @@ public class Usuario extends Pessoa{
   public void coletaAtivFis(int atividade){
 
   }
-
-  /* retornaRecomend(), responsável por calcular a melhor recomendação, conforme o desenvolvimento do usuário. */
-  public void retornaRecomend(){
-
-  }
-
-  /* recomendaDieta() responsável por avaliar o desenpenho conforme as refeições do usuário e, assim recomendar uma dieta possivelmente adequada.*/
-  public void recomendaDieta(){
+  
+  
+  
+  public double calculaCarboidratos(){
     
   }
   
-  public void pegaDados(){
+  public void recomendacoes(double resultados){
+      
+  }
+  
+  public void coletaAlimentos(){
+      
+  }
+  
+ 
+  
+  /* retornaRecomend(), responsável por calcular a melhor recomendação, conforme o desenvolvimento do usuário. */
+ // public void retornaRecomend(){;
+//
+  //}
+
+  /* recomendaDieta() responsável por avaliar o desenpenho conforme as refeições do usuário e, assim recomendar uma dieta possivelmente adequada.*/
+//  public void recomendaDieta(){
+//    
+//  }
+  
+  public void pegaDados(String email, String login, String senha){
       System.out.printf("Digite o seu email:\n");
       email = input.nextLine();
       System.out.printf("Digite o seu login:\n");
@@ -68,7 +84,7 @@ public class Usuario extends Pessoa{
       telefone = input.nextLine();
   }
 
-
+  
 
   //GETTERS e SETTERS
   public void setGlicemia(float glicemia){
