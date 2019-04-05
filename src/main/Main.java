@@ -19,6 +19,8 @@ package main;
 import java.util.Scanner;
 
 class Main {
+  static Scanner input = new Scanner(System.in);
+  static Database db = new Database();
   public static void main(String[] args) {
     
       /**
@@ -33,14 +35,26 @@ class Main {
       System.out.printf("Nossa motivação é a sua preocupação.\n");
       System.out.printf("Carregando a tela de login...\n");
       System.out.printf("NOTA: Adicionar tela de login...\n");
-      Scanner input = new Scanner(System.in);
+      
+      
       int choice = 0;
         do {
             printMenuLogin();
             choice = input.nextInt();
             switch(choice){
                 case 1:
-                    
+                    System.out.println("Você escolheu a opção: 1 - Cadastro de usuário.\n");
+                    cadastra();
+                    break;
+                case 2:
+                    String login,senha;
+                    System.out.println("Você escolheu a opção: 2 - Login de usuário.\n");
+                    System.out.println("Digite seu login: \n");
+                    login = input.nextLine();                    
+                    System.out.println("Digite sua senha: \n");
+                    senha = input.nextLine();
+                    loga(login,senha);
+                    break;
             }
         } while(choice != 4);
       
@@ -48,11 +62,11 @@ class Main {
       
       
       //Iniciando Banco de Dados
-      Database db = new Database("Users");
+      /*Database db = new Database("Users");
       
       db.Users.get(0).pegaDados();
       db.Users.get(0).mostraIMC(db.Users.get(0).getPeso(),db.Users.get(0).getAltura());
-      //aaaaaaaaaaaaaaaa
+      //aaaaaaaaaaaaaaaa*/
     /*
     PARA TESTES
     Scanner input = new Scanner(System.in);
@@ -84,6 +98,29 @@ class Main {
   System.out.println("2 -  Login de usuário.\n");
   System.out.println("3 -  Login anônimo.\n");
   System.out.println("4 -  Sair.\n");
+  }
+  
+  public static void cadastra(){
+      System.out.println("Crie um login: (Exemplo: unifmcruz) \n");
+      String login = input.nextLine();
+      String senha, senha2;
+      boolean voltar= false;
+      do{
+        System.out.println("Crie uma senha: (Exemplo: diabetech123) \n");
+        senha = input.nextLine();
+        System.out.println("Digite a senha novamente: (Exemplo: diabetech123) \n");
+        senha2 = input.nextLine();
+        if(senha.equals(senha2)==false){
+            System.out.println("Você digitou senhas diferentes, faça de novo ☺\n");
+            voltar = true;
+            }
+      }while(voltar == false);
+      db.criaPessoa(login, senha);
+      System.out.println("Usuário "+login+ " criado com sucesso!\n");
+  }
+  public static boolean loga(String login, String senha){
+      //continuar... matheus
+      return false;
   }
 }
 

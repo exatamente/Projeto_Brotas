@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class Usuario extends Pessoa{
     Scanner input = new Scanner(System.in);
   //Parâmetros: String nome,int idade, float peso, float altura
-  Usuario(){
+  public Usuario(String login, String senha){
     /*
     Ver.:0.4
 
@@ -23,7 +23,9 @@ public class Usuario extends Pessoa{
     */
     
     super();
-    
+    this.login = login;
+    this.senha = senha;
+      
     
   }
 
