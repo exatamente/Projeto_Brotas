@@ -8,6 +8,7 @@ package main;
  * @author MatheusElias - coder
  */
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  *
@@ -34,11 +35,22 @@ public class Database {
     
     String tipos[] = {"Users"};
     ArrayList <Usuario> Users = new ArrayList<>();
+    Iterator <Usuario> itr = Users.iterator();
     
     private String tipo;
     private int i=0,teste=0;
     
-    public void criaPessoa(){
-        Users.add(new Usuario());
+    public void criaPessoa(String login,String senha){
+        Users.add(new Usuario(login,senha));
+    }
+    
+    public int procuraPessoa(String login){
+        int i=-1;
+        //continuar... matheus
+        /*while(itr.hasNext()){
+            
+            if()
+        }*/
+        return i;
     }
 }
