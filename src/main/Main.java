@@ -35,7 +35,7 @@ class Main {
       System.out.printf("Nossa motivação é a sua preocupação.\n");
       System.out.printf("Carregando a tela de login...\n");
       System.out.printf("NOTA: Adicionar tela de login...\n");
-      
+      Usuario cobaia=new Usuario();
       
       int choice = 0;
         do {
@@ -44,17 +44,23 @@ class Main {
             switch(choice){
                 case 1:
                     System.out.println("Você escolheu a opção: 1 - Cadastro de usuário.\n");
-                    cadastra();
+                    cobaia.cadastra();
                     break;
                 case 2:
                     String login,senha;
                     System.out.println("Você escolheu a opção: 2 - Login de usuário.\n");
                     System.out.println("Digite seu login: \n");
-                    login = input.nextLine();                    
+                    login = input.nextLine();
+                    
                     System.out.println("Digite sua senha: \n");
                     senha = input.nextLine();
                     loga(login,senha);
                     break;
+                    
+                case 3:
+                    System.out.println("Você escolheu a opção: 3 - Login anônimo.\n");
+                    
+                    
             }
         } while(choice != 4);
       
@@ -66,7 +72,7 @@ class Main {
       
       db.Users.get(0).pegaDados();
       db.Users.get(0).mostraIMC(db.Users.get(0).getPeso(),db.Users.get(0).getAltura());
-      //aaaaaaaaaaaaaaaa*/
+      //aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
     /*
     PARA TESTES
     Scanner input = new Scanner(System.in);
@@ -89,37 +95,40 @@ class Main {
 
     // construtor App() instancia todas as outras classes contruindo a aplicação
     //App();
-
-
   }
+  
   public static void printMenuLogin(){
-  System.out.println("Seja bem vindo usuário. Por favor, escolha uma opção...\n");      
-  System.out.println("1 -  Cadastro de usuário.\n");      
-  System.out.println("2 -  Login de usuário.\n");
-  System.out.println("3 -  Login anônimo.\n");
-  System.out.println("4 -  Sair.\n");
+    System.out.println("Seja bem vindo usuário. Por favor, escolha uma opção...\n");      
+    System.out.println("1 -  Cadastro de usuário.\n");      
+    System.out.println("2 -  Login de usuário.\n");
+    System.out.println("3 -  Login anônimo.\n");
+    System.out.println("4 -  Sair.\n");
   }
   
   public static void cadastra(){
       System.out.println("Crie um login: (Exemplo: unifmcruz) \n");
       String login = input.nextLine();
       String senha, senha2;
-      boolean voltar= false;
+      boolean voltar = false;
+      
       do{
         System.out.println("Crie uma senha: (Exemplo: diabetech123) \n");
         senha = input.nextLine();
         System.out.println("Digite a senha novamente: (Exemplo: diabetech123) \n");
         senha2 = input.nextLine();
-        if(senha.equals(senha2)==false){
-            System.out.println("Você digitou senhas diferentes, faça de novo ☺\n");
-            voltar = true;
+        if(senha.equals(senha2) == false){
+                System.out.println("Você digitou senhas diferentes, faça de novo ☺\n");
+                voltar = true;
             }
       }while(voltar == false);
       db.criaPessoa(login, senha);
-      System.out.println("Usuário "+login+ " criado com sucesso!\n");
+      System.out.println("Usuário " + login + " criado com sucesso!\n");
   }
+  
   public static boolean loga(String login, String senha){
-      //continuar... matheus   
+      //continuar... matheus  
+      db.procuraPessoa(login);
+      
       return false;
   }
 }
