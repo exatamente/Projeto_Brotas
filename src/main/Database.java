@@ -45,7 +45,14 @@ public class Database {
     }
     
     public int procuraPessoa(String login){
-        int i=-1;
+        //Procura de Usuários
+        for(Usuario p:  Users ){
+            i++;
+            if(login.equals(p.getLogin())){
+                System.out.println("Bem - vindo " + p.getNome() + "!");
+            };
+        }
+
         //continuar... matheus
         /*while(itr.hasNext()){
             
