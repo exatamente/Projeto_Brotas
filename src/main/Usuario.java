@@ -12,6 +12,9 @@ import java.util.Scanner;
 public class Usuario extends Pessoa implements Alimentacao{
     Scanner input = new Scanner(System.in);
   //Parâmetros: String nome,int idade, float peso, float altura
+  public Usuario(){
+  }
+  
   public Usuario(String login, String senha){
     /*
     Ver.:0.4
@@ -21,12 +24,9 @@ public class Usuario extends Pessoa implements Alimentacao{
     que irá verificar se o paciente tomou insulina(true) ou não(false).
     
     */
-    
     super();
     this.login = login;
     this.senha = senha;
-      
-    
   }
 
   private String email;
@@ -48,11 +48,9 @@ public class Usuario extends Pessoa implements Alimentacao{
   public void coletaAtivFis(int atividade){
 
   }
-  
-  
-  
+
   public double calculaCarboidratos(){
-    
+    return .0;
   }
   
   public void recomendacoes(double resultados){
@@ -63,7 +61,9 @@ public class Usuario extends Pessoa implements Alimentacao{
       
   }
   
- 
+  public void cadastra(){
+  
+  }
   
   /* retornaRecomend(), responsável por calcular a melhor recomendação, conforme o desenvolvimento do usuário. */
  // public void retornaRecomend(){;
@@ -78,12 +78,16 @@ public class Usuario extends Pessoa implements Alimentacao{
   public void pegaDados(String email, String login, String senha){
       System.out.printf("Digite o seu email:\n");
       email = input.nextLine();
+      setEmail(email);//
       System.out.printf("Digite o seu login:\n");
       login = input.nextLine();
+      setLogin(login);
       System.out.printf("Digite uma senha:(Você precisará dela para realizar login)\n");
       senha = input.nextLine();
+      setSenha(senha);
       System.out.printf("Digite o seu número de telefone:\n");
       telefone = input.nextLine();
+      setTelefone(telefone);
   }
 
   
@@ -124,8 +128,6 @@ public class Usuario extends Pessoa implements Alimentacao{
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
-  
-      
 
   //FIM DOS GETTERS E SETTERS
 }
