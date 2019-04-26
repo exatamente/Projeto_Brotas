@@ -35,7 +35,6 @@ class Main {
       System.out.printf("Nossa motivação é a sua preocupação.\n");
       System.out.printf("Carregando a tela de login...\n");
       System.out.printf("NOTA: Adicionar tela de login...\n");
-      Usuario cobaia=new Usuario();
       
       int choice = 0;
         do {
@@ -44,17 +43,14 @@ class Main {
             switch(choice){
                 case 1:
                     System.out.println("Você escolheu a opção: 1 - Cadastro de usuário.\n");
-                    cobaia.cadastra();
+                    //cobaia.cadastra();
                     break;
                 case 2:
                     String login,senha;
                     System.out.println("Você escolheu a opção: 2 - Login de usuário.\n");
                     System.out.println("Digite seu login: \n");
                     login = input.nextLine();
-                    
-                    System.out.println("Digite sua senha: \n");
-                    senha = input.nextLine();
-                    loga(login,senha);
+                    db.login(login);
                     break;
                     
                 case 3:
@@ -104,8 +100,8 @@ class Main {
     System.out.println("3 -  Login anônimo.\n");
     System.out.println("4 -  Sair.\n");
   }
-  
-  public static void cadastra(){
+  //Isto abaixo será substituido no Database
+  /*public static void cadastra(){
       System.out.println("Crie um login: (Exemplo: unifmcruz) \n");
       String login = input.nextLine();
       String senha, senha2;
@@ -130,6 +126,6 @@ class Main {
       db.procuraPessoa(login);
       
       return false;
-  }
+  }*/
 }
 
