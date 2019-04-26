@@ -9,7 +9,7 @@ import java.util.Scanner;
  * @author unifesilva
  * 
  */
-public class Pessoa {
+public abstract class Pessoa {
     Scanner input = new Scanner(System.in);
     
     private String nome;

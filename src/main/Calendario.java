@@ -24,10 +24,8 @@ public class Calendario{
       @RenanMartins2
       Construtor - Calendário
       Ela irá pegar o dia, mes, ano, hora, minuto, através do Getters e Setters.
-
-
     */
-
+    
     this.dia = dia;
     this.mes = mes;
     this.ano = ano;
@@ -38,7 +36,7 @@ public class Calendario{
   
   /* pegaData() fornecerá a atual data para o algoritmo.*/
   public void pegaData(){
-
+      
   }
 
   /* projetarData() lançara a data atual no calendário da plataforma.*/
