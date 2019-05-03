@@ -22,7 +22,7 @@ public class Database {
     }
     public Database(String tipo){
         for(i=0;i<tipos.length;i++){
-            if(tipo == tipos[i]){
+            if(tipo.equals(tipos[i])){
                 this.tipo = tipo;
                 this.teste = 1;
                 return;
@@ -105,4 +105,60 @@ public class Database {
             return false;
         }
     }
+    
+    public boolean cadastra(){
+        System.out.println("Bem vindo ao sistema de cadastro!");
+        System.out.println("Digite um login.");
+        String login = input.nextLine();
+        int existe = procuraConta(login);
+        if(existe > -1){
+            System.out.println("login: "+Users.get(existe).getLogin()+ " já pertence ao banco de dados, deseja realizar login? Digite 'Sim' ou 'Não'.");
+            boolean refazer = false;
+            do{
+                refazer = false;
+                if(input.nextLine().contains("Sim")){
+                    System.out.println("Voltando ao menu.");
+                    return false;
+                }
+                else if(input.nextLine().contains("Não")){
+                    System.out.println(" Digite outro login para cadastro.");
+                    login = input.nextLine();
+                    if(procuraConta(login)>-1){
+                        System.out.println("Conta ja existente, voltando ao menu.");
+                        return false;
+                    }
+                    else{}
+                }
+                
+                else{
+                    System.out.println("Opção de resposta inválida. Tente novamente.");
+                    refazer = true;
+                    System.out.println("Digite 'Sim' se seu nome é: "+Users.get(i).getNome() +" ou 'Não' para voltar.");
+                }
+            }while(refazer = true);
+        }
+        else{
+            System.out.println("Login criado com sucesso!");
+        }
+        String senha;
+        boolean refazerSenha = false;
+        do{
+            refazerSenha = false;
+            System.out.println("Digite uma senha!");
+            senha = input.nextLine();
+            System.out.println("Digite novamente sua senha!");
+            String confirmaSenha = input.nextLine();
+            if(senha.equals(confirmaSenha)){
+                System.out.println("Senha criada com sucesso.");
+            }
+            else{
+                System.out.println("Suas senhas não conferem, tente novamente.");
+                refazerSenha = true;
+            }
+        }while(refazerSenha = true);
+        criaConta(login,senha);
+        System.out.println("Parabéns, você esta cadastrado com sucesso!");
+        return true;
+    }
+    
 }

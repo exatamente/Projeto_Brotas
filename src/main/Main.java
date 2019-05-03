@@ -43,19 +43,28 @@ class Main {
             switch(choice){
                 case 1:
                     System.out.println("Você escolheu a opção: 1 - Cadastro de usuário.\n");
-                    //cobaia.cadastra();
+                    db.cadastra();
+                    if(db.cadastra()){
+                        
+                    }
                     break;
                 case 2:
-                    String login,senha;
                     System.out.println("Você escolheu a opção: 2 - Login de usuário.\n");
                     System.out.println("Digite seu login: \n");
-                    login = input.nextLine();
-                    db.login(login);
+                    if(db.login(input.nextLine())){
+                                                
+                    }
                     break;
                     
                 case 3:
                     System.out.println("Você escolheu a opção: 3 - Login anônimo.\n");
-                    
+                    break;
+                case 4:
+                    System.out.println("Você escolheu a opção: 4 - Sair.\n");
+                    System.out.println("Até mais.");
+                    break;
+                default:
+                    System.out.println("Opção não encontrada! Tente novamente");
                     
             }
         } while(choice != 4);
