@@ -17,6 +17,7 @@ import java.util.Scanner;
  */
 
 public class Database {
+    Pessoa anonimo;
     public Database(){
         
     }
@@ -159,6 +160,34 @@ public class Database {
         criaConta(login,senha);
         System.out.println("Parabéns, você esta cadastrado com sucesso!");
         return true;
+    }
+    
+    //Login anônimo
+    public void loginAnonimo(){
+        int idade = 0;
+        double glicemia = 0;
+        System.out.println("Bem - vindo ao Diabetech!");
+        System.out.println("Insira sua glicemia (mg/dL): ");
+         
+        glicemia = input.nextDouble();
+        
+        
+        if(glicemia < 70){
+            System.out.println("Consulte um médico você pode estar hipoglicêmico");
+        }
+        if(glicemia >= 70 && glicemia <= 100){
+            System.out.println("Sua glicemia está estável");
+        }
+        else if(glicemia >= 100 && glicemia <= 140){
+            System.out.println("Consulte um médico você pode estar hiperglicêmico");
+        }
+        else if(glicemia > 140){
+            System.out.println("Vá ao médico, a sua glicemia está muito acima do normal");
+        }
+        
+        
+        
+        
     }
     
 }

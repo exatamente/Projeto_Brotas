@@ -1,7 +1,6 @@
 /*
  * 
  */
-
 package main;
 /**
  * Classe para criar uma plataforma que auxilie o usuário a gerenciar sua atividade e desenvolvimento.
@@ -16,7 +15,6 @@ public class Calendario{
   private int hora;
   private int minuto;
 
-  
   Calendario(int dia, int mes, int ano, int hora, int minuto){
     /*
       Ver.:0.4

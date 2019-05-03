@@ -20,17 +20,7 @@ public abstract class Pessoa {
     
     
     Pessoa(){
-        System.out.printf("Digite o seu primero nome:\n");
-        this.nome = input.nextLine();
-        System.out.printf("Digite o seu sobrenome:\n");
-        this.sobrenome = input.nextLine();
-        System.out.printf("Digite a sua idade:\n");
-        this.idade = input.nextInt();
-        System.out.printf("Digite o seu peso:\n");
-        this.peso = input.nextDouble();
-        System.out.printf("Digite a sua altura:\n");
-        this.peso = input.nextDouble();
-        System.out.println(" ");
+        
     }
     
     Pessoa(String nome, int idade, double peso, double altura){
