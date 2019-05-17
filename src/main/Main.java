@@ -16,6 +16,7 @@
 package main;
 
 
+import java.util.Date;
 import java.util.Scanner;
 
 class Main {
@@ -36,18 +37,18 @@ class Main {
       System.out.printf("Nossa motivação é a sua preocupação.\n");
       System.out.printf("Carregando a tela de login...\n");
                  
-      int choice = 0;
+      String choice;
         do {
             printMenuLogin();
-            choice = input.nextInt();
+            choice = input.nextLine();
             switch(choice){
-                case 1:
+                case "1":
                     System.out.println("Você escolheu a opção: 1 - Cadastro de usuário.\n");
                     if(db.cadastra()){
                       usuarioLogado();                            
                     }
                     break;
-                case 2:
+                case "2":
                     System.out.println("Você escolheu a opção: 2 - Login de usuário.\n");
                     System.out.println("Digite seu login: \n");
                     login = input.nextLine();
@@ -56,10 +57,11 @@ class Main {
                     }
                     break;
                     
-                case 3:
+                case "3":
                     System.out.println("Você escolheu a opção: 3 - Login anônimo.\n");
+                    db.loginAnonimo();
                     break;
-                case 4:
+                case "4":
                     System.out.println("Você escolheu a opção: 4 - Sair.\n");
                     System.out.println("Até mais.");
                     break;
@@ -67,13 +69,30 @@ class Main {
                     System.out.println("Opção não encontrada! Tente novamente");
                     
             }
-        } while(choice != 4);
+        } while(!choice.equals("4"));
          
   }
   
   public static void usuarioLogado(){
       System.out.println("Bem vindo "+ login + " .");
-      printMenuFuncionalidades();
+      String choice ;
+      do{
+          printMenuFuncionalidades();
+          choice = input.nextLine();
+            switch(choice){
+                case "1":
+                    System.out.println("Você escolheu a opção: 1 - Mostrar calendário.\n");
+                    break;
+                case "2":
+                    System.out.println("Você escolheu a opção: 2 - Atualizar dados.\n");
+                    break;
+                case "3":
+                    System.out.println("Você escolheu a opção: 3 - Mostrar dicas.\n");
+                    break;
+                default:
+                    System.out.println("Opção não encontrada! Tente novamente");
+            }
+      }while(!choice.equals("4"));
   }
   
   public static void printMenuLogin(){

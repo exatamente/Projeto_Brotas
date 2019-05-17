@@ -75,23 +75,6 @@ public class Usuario extends Pessoa implements Alimentacao{
 //    
 //  }
   
-  public void pegaDados(String email, String login, String senha){
-      System.out.printf("Digite o seu email:\n");
-      email = input.nextLine();
-      setEmail(email);//
-      System.out.printf("Digite o seu login:\n");
-      login = input.nextLine();
-      setLogin(login);
-      System.out.printf("Digite uma senha:(Você precisará dela para realizar login)\n");
-      senha = input.nextLine();
-      setSenha(senha);
-      System.out.printf("Digite o seu número de telefone:\n");
-      telefone = input.nextLine();
-      setTelefone(telefone);
-  }
-
-  
-
   //GETTERS e SETTERS
   public void setGlicemia(float glicemia){
     this.glicemia = glicemia;

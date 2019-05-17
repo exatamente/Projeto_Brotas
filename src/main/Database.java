@@ -149,18 +149,30 @@ public class Database {
             senha = input.nextLine();
             System.out.println("Digite novamente sua senha!");
             String confirmaSenha = input.nextLine();
+            
             if(senha.equals(confirmaSenha)){
                 System.out.println("Senha criada com sucesso.");
+                refazerSenha = false;
             }
             else{
                 System.out.println("Suas senhas não conferem, tente novamente.");
                 refazerSenha = true;
             }
-        }while(refazerSenha = true);
+        }while(refazerSenha == true);
         criaConta(login,senha);
+        pegaDados(Users.size() - 1);
         System.out.println("Parabéns, você esta cadastrado com sucesso!");
         return true;
     }
+    
+    public void pegaDados(int i){
+      System.out.printf("Digite o seu email:\n");
+      String email = input.nextLine();
+      Users.get(i).setEmail(email);//
+      System.out.printf("Digite o seu número de telefone:\n");
+      String telefone = input.nextLine();
+      Users.get(i).setTelefone(telefone);
+  }
     
     //Login anônimo
     public void loginAnonimo(){
