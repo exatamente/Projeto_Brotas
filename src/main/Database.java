@@ -45,7 +45,7 @@ public class Database {
     private int i=0,teste=0;
     
     public void criaConta(String login,String senha){
-        Users.add(new Usuario(login,senha));
+        Users.add(new Usuario(login, senha));
     }
     
     public int procuraConta(String login){
@@ -60,8 +60,9 @@ public class Database {
     
     public boolean login(String login){
         int existe = procuraConta(login);
+        //System.out.println(Users.);
         if(existe > -1){
-            System.out.println("Seja bem vindo, seu nome é "+Users.get(i).getNome() + " ?, se sim digite 'Sim', ou digite 'Não' para voltar.");
+            System.out.println("Seja bem vindo, seu nome é "+Users.get(existe).getNome() + " ?, se sim digite 'Sim', ou digite 'Não' para voltar.");
             boolean refazer = false;
             do{
                 refazer = false;
@@ -73,7 +74,7 @@ public class Database {
                 else{
                     System.out.println("Opção de resposta inválida. Tente novamente.");
                     refazer = true;
-                    System.out.println("Digite 'Sim' se seu nome é: "+Users.get(i).getNome() +" ou 'Não' para voltar.");
+                    System.out.println("Digite 'Sim' se seu nome é: " + Users.get(i).getNome() + " ou 'Não' para voltar.");
                 }
             }while(refazer = true);
             
@@ -113,8 +114,8 @@ public class Database {
         String login = input.nextLine();
         int existe = procuraConta(login);
         if(existe > -1){
-            System.out.println("login: "+Users.get(existe).getLogin()+ " já pertence ao banco de dados, deseja realizar login? Digite 'Sim' ou 'Não'.");
-            boolean refazer = false;
+            System.out.println("login: " + Users.get(existe).getNome() + " já pertence ao banco de dados, deseja realizar login? Digite 'Sim' ou 'Não'.");
+            boolean refazer = false;    
             do{
                 refazer = false;
                 if(input.nextLine().contains("Sim")){
@@ -134,7 +135,7 @@ public class Database {
                 else{
                     System.out.println("Opção de resposta inválida. Tente novamente.");
                     refazer = true;
-                    System.out.println("Digite 'Sim' se seu nome é: "+Users.get(i).getNome() +" ou 'Não' para voltar.");
+                    System.out.println("Digite 'Sim' se seu nome é: " + Users.get(i).getNome() + " ou 'Não' para voltar.");
                 }
             }while(refazer = true);
         }
@@ -159,6 +160,7 @@ public class Database {
                 refazerSenha = true;
             }
         }while(refazerSenha == true);
+        System.out.println("LOGIN: "+login);
         criaConta(login,senha);
         pegaDados(Users.size() - 1);
         System.out.println("Parabéns, você esta cadastrado com sucesso!");
@@ -166,12 +168,13 @@ public class Database {
     }
     
     public void pegaDados(int i){
+      
+      System.out.printf("Digite o seu nome completo:\n");
+      String nome = input.nextLine();
+      Users.get(i).setNome(nome);//
       System.out.printf("Digite o seu email:\n");
       String email = input.nextLine();
-      Users.get(i).setEmail(email);//
-      System.out.printf("Digite o seu número de telefone:\n");
-      String telefone = input.nextLine();
-      Users.get(i).setTelefone(telefone);
+      Users.get(i).setEmail(email);
   }
     
     //Login anônimo

@@ -15,6 +15,7 @@ public class Usuario extends Pessoa implements Alimentacao{
   public Usuario(){
   }
   
+  
   public Usuario(String login, String senha){
     /*
     Ver.:0.4
@@ -24,7 +25,7 @@ public class Usuario extends Pessoa implements Alimentacao{
     que irá verificar se o paciente tomou insulina(true) ou não(false).
     
     */
-    super();
+    
     this.login = login;
     this.senha = senha;
   }

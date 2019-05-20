@@ -23,6 +23,11 @@ public abstract class Pessoa {
         
     }
     
+    Pessoa(String nome, int idade){    
+        setNome(nome);
+        setIdade(idade);
+    }
+    
     Pessoa(String nome, int idade, double peso, double altura){
         this.nome = nome;
         this.idade = idade;
