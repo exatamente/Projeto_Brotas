@@ -33,7 +33,6 @@ public class Database {
                 System.out.println("Erro de Database... Contate a central da Diabetech!!!\n");
             }
         }
-        
     }
     
     String tipos[] = {"Users"};
@@ -179,16 +178,15 @@ public class Database {
       Users.get(i).setEmail(email);
   }
     
+    
+    
     //Login anônimo
     public void loginAnonimo(){
         int idade = 0;
         double glicemia = 0;
         System.out.println("Bem - vindo ao Diabetech!");
         System.out.println("Insira sua glicemia (mg/dL): ");
-         
         glicemia = input.nextDouble();
-        
-        
         if(glicemia < 70){
             System.out.println("Consulte um médico você pode estar hipoglicêmico");
         }

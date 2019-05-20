@@ -1,7 +1,7 @@
 /**
  * 
  */
-package main;
+package controller;
 /**
  * Classe GUI estende a classe Graficos.java contendo métodos para instanciar e manipular as janelas.
  * @author MatheusElias - coder

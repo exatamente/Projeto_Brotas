@@ -6,8 +6,8 @@ package main;
  * Classe para criar uma plataforma que auxilie o usuário a gerenciar sua atividade e desenvolvimento.
  * @author MatheusElias - coder
  *  
- * 
  */
+import java.util.Calendar;
 public class Calendario{
   private int dia;
   private int mes;
@@ -29,8 +29,10 @@ public class Calendario{
     this.ano = ano;
     this.hora = hora;
     this.minuto = minuto;
+   
+    
+    
   }
-  
   
   /* pegaData() fornecerá a atual data para o algoritmo.*/
   public void pegaData(){
