@@ -10,6 +10,7 @@ package main;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
+import java.util.Calendar;
 
 /**
  *
@@ -66,8 +67,9 @@ public class Database {
             boolean refazer = false;
             do{
                 refazer = false;
-                if(input.nextLine().contains("Sim")){}
-                else if(input.nextLine().contains("Não")){
+                String opc = input.nextLine();
+                if(opc.toLowerCase().contains("s")){}
+                else if(opc.toLowerCase().contains("n")){
                     System.out.println("Voltando ao menu.");
                     return false;
                 }
@@ -76,7 +78,7 @@ public class Database {
                     refazer = true;
                     System.out.println("Digite 'Sim' se seu nome é: " + Users.get(i).getNome() + " ou 'Não' para voltar.");
                 }
-            }while(refazer = true);
+            }while(refazer == true);
             
             System.out.println("Digite a sua senha.");
             String testeSenha = input.nextLine();

@@ -82,6 +82,8 @@ class Main {
             switch(choice){
                 case "1":
                     System.out.println("Você escolheu a opção: 1 - Mostrar calendário.\n");
+                    
+                    
                     break;
                 case "2":
                     System.out.println("Você escolheu a opção: 2 - Atualizar dados.\n");
