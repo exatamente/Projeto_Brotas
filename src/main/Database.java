@@ -126,7 +126,7 @@ public class Database {
                 else if(input.nextLine().contains("Não")){
                     System.out.println(" Digite outro login para cadastro.");
                     login = input.nextLine();
-                    if(procuraConta(login)>-1){
+                    if(procuraConta(login)>=1){
                         System.out.println("Conta ja existente, voltando ao menu.");
                         return false;
                     }
