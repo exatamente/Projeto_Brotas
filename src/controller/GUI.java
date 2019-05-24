@@ -4,9 +4,11 @@
 package controller;
 
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 import main.Database;
 import view.Inicial;
 import view.Login;
+import view.LoginAnonimo;
 import view.cadastro;
 import view.fichaCadastro;
 
@@ -31,10 +33,15 @@ public class GUI{
   }
   static Scanner input = new Scanner(System.in);
   static Database db = new Database();
+  
   static Inicial telaInicial;
   static cadastro telaCadastro;
   static fichaCadastro telaFichaC;
   static Login telaLogin;
+  static LoginAnonimo telaLoginAn;
+  
+  static String login;
+  static String senha;
 
   public void renderScreen(int i){
       if(i ==0){
@@ -53,6 +60,10 @@ public class GUI{
           telaLogin = new Login();
           telaLogin.setVisible(true);
       }
+      else if (i==4){
+          telaLoginAn = new LoginAnonimo();
+          telaLoginAn.setVisible(true);
+      }
   }
   
     public void closeScreen(int i){
@@ -68,6 +79,9 @@ public class GUI{
       else if (i==3){
           telaLogin.setVisible(false);
       }
+      else if(i==4){
+          telaLoginAn.setVisible(false);
+      }
   }
   
   public void getInitialButtonPressed(int i){
@@ -80,18 +94,22 @@ public class GUI{
           closeScreen(0);
       }
       else if(i==3){
-          
+          renderScreen(4);
+          closeScreen(0);
       }
       else if(i==4){
           System.exit(0);
       }
   }
   
-  public void searchLogin(String login){
+  public void searchLoginCadastro(String login){
       if(db.procuraConta(login) != -1){
-          
+          JOptionPane.showMessageDialog(telaCadastro, "Login já utilizado!", "Erro", JOptionPane.ERROR_MESSAGE, null);
       }
       else{
+          this.login = login;
+          renderScreen(2);
+          closeScreen(1);
           
       }
   }

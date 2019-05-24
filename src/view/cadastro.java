@@ -101,7 +101,7 @@ public class cadastro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEnviarActionPerformed
-        GUI.searchLogin(jTextFieldLogin.getText());
+        GUI.searchLoginCadastro(jTextFieldLogin.getText());
     }//GEN-LAST:event_jButtonEnviarActionPerformed
 
     /**
