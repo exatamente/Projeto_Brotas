@@ -15,9 +15,13 @@ public class Usuario extends Pessoa implements Alimentacao{
   public Usuario(){
   }
   
-  
   public Usuario(String login, String senha){
-    /*
+      
+  }
+  
+  public Usuario(String login, String senha, String nome, int idade, double peso, double altura, String genero){
+    super(nome, idade, peso, altura, genero);
+      /*
     Ver.:0.4
 
     Construtor - Usuário

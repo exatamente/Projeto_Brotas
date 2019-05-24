@@ -48,6 +48,10 @@ public class Database {
         Users.add(new Usuario(login, senha));
     }
     
+    public void criaConta(String login, String senha, String nome, int idade, double peso, double altura, String genero){
+        Users.add(new Usuario( login,  senha,  nome,  idade,  peso,  altura,  genero));
+    }
+    
     public int procuraConta(String login){
         //Procura de Usuários
         for(i=0;i<Users.size();i++){

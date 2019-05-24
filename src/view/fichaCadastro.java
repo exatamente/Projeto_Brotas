@@ -6,7 +6,9 @@
 
 package view;
 
+import controller.GUI;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -19,7 +21,9 @@ public class fichaCadastro extends javax.swing.JFrame {
         initComponents();
     }
     
-    static ArrayList<String> dados = new ArrayList<>();
+    static GUI GUI = new GUI();
+    
+    static public ArrayList<String> dados;
 
     /** This method is called from within the constructor to
      * initialize the form.
@@ -69,16 +73,31 @@ public class fichaCadastro extends javax.swing.JFrame {
         jLabelSenhaNov.setText("Senha novamente:");
 
         jTextFieldSenhaNov.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextFieldSenhaNov.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldSenhaNovActionPerformed(evt);
+            }
+        });
 
         jLabelNome.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelNome.setText("Nome completo:");
 
         jTextFieldNome.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextFieldNome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldNomeActionPerformed(evt);
+            }
+        });
 
         jLabelIdade.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelIdade.setText("Idade:");
 
         jTextFieldIdade.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextFieldIdade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldIdadeActionPerformed(evt);
+            }
+        });
 
         jLabelAltura.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelAltura.setText("Altura:");
@@ -235,6 +254,42 @@ public class fichaCadastro extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonCadastrarActionPerformed
 
+    private void jTextFieldSenhaNovActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldSenhaNovActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldSenhaNovActionPerformed
+
+    private void jTextFieldNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldNomeActionPerformed
+
+    private void jTextFieldIdadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldIdadeActionPerformed
+        dados = new ArrayList<>();
+        dados.add(jTextFieldSenha.getText());
+        dados.add(jTextFieldSenhaNov.getText());
+        if(dados.get(0).equals(dados.get(1))){
+            dados.add(jTextFieldNome.getText());
+            dados.add(jTextFieldIdade.getText());
+            dados.add(jTextFieldAltura.getText());
+            dados.add(jTextFieldPeso.getText());
+            if(jRadioButtonMasculino.isSelected()){
+                dados.add("Masculino");
+            }
+            else if(jRadioButtonFeminino.isSelected()){
+                dados.add("Feminino");
+            }
+            else if(jRadioButtonFeminino.isSelected()){
+                dados.add("Outro");
+            }
+            GUI.getNewUserInfo(dados);
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Erro! Senhas diferentes, tente novamente!");
+        }
+    }//GEN-LAST:event_jTextFieldIdadeActionPerformed
+    
+    public void setText(String login){
+        jLabelLogin.setText(login);
+    }
     /**
      * @param args the command line arguments
      */

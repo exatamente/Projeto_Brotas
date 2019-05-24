@@ -3,12 +3,14 @@
  */
 package controller;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
 import main.Database;
 import view.Inicial;
 import view.Login;
 import view.LoginAnonimo;
+import view.MenuLogado;
 import view.cadastro;
 import view.fichaCadastro;
 
@@ -39,6 +41,7 @@ public class GUI{
   static fichaCadastro telaFichaC;
   static Login telaLogin;
   static LoginAnonimo telaLoginAn;
+  static MenuLogado telaMenuLog;
   
   static String login;
   static String senha;
@@ -63,6 +66,9 @@ public class GUI{
       else if (i==4){
           telaLoginAn = new LoginAnonimo();
           telaLoginAn.setVisible(true);
+      }else if (i==5){
+          telaMenuLog = new MenuLogado();
+          telaMenuLog.setVisible(true);
       }
   }
   
@@ -81,6 +87,8 @@ public class GUI{
       }
       else if(i==4){
           telaLoginAn.setVisible(false);
+      }else if (i==5){
+          telaMenuLog.setVisible(false);
       }
   }
   
@@ -110,7 +118,31 @@ public class GUI{
           this.login = login;
           renderScreen(2);
           closeScreen(1);
+          telaFichaC.setText(login);
           
+      }
+  }
+  
+  public void getNewUserInfo(ArrayList <String> dados){
+      db.criaConta(login, dados.get(0), dados.get(2), Integer.parseInt(dados.get(3)), Double.parseDouble(dados.get(5)), Double.parseDouble(dados.get(4)), dados.get(6));
+      JOptionPane.showMessageDialog(null, "Usuário cadastrado com sucesso.");
+      renderScreen(5);
+      closeScreen(2);
+  }
+  public void getLoggedButtonPressed(int i){
+      if(i==1){
+          JOptionPane.showMessageDialog(null, "Calendario inativo pelo momento.");
+      }
+      else if(i==2){
+          renderScreen(3);
+          closeScreen(0);
+      }
+      else if(i==3){
+          renderScreen(4);
+          closeScreen(0);
+      }
+      else if(i==4){
+          System.exit(0);
       }
   }
 

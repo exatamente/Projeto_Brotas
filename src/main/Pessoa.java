@@ -17,6 +17,7 @@ public abstract class Pessoa {
     private int idade;
     private double peso;
     private double altura;
+    private String genero;
     
     
     Pessoa(){
@@ -28,7 +29,7 @@ public abstract class Pessoa {
         setIdade(idade);
     }
     
-    Pessoa(String nome, int idade, double peso, double altura){
+    Pessoa(String nome, int idade, double peso, double altura, String genero){
         this.nome = nome;
         this.idade = idade;
         this.peso = peso;
@@ -74,5 +75,15 @@ public abstract class Pessoa {
     public void setAltura(double altura) {
         this.altura = altura;
     }    
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+    
+    
     
 }
