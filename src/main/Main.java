@@ -16,15 +16,23 @@
 package main;
 
 
-import java.util.Date;
+import controller.GUI;
 import java.util.Scanner;
 
 class Main {
   static String login;
   static Scanner input = new Scanner(System.in);
   static Database db = new Database();
+  static GUI GUI =  new GUI();
   public static void main(String[] args) {
+    /**
+     * @MatheusElias
+     * 
+     * Classe main que instância a view.
+     */
     
+    GUI.renderScreen(0);
+      
       /**
        * @RenanMartins
       
@@ -33,7 +41,7 @@ class Main {
        * O Arraylist é uma classe que vai ser utilizada para criação do banco de dados do usuário, com
        * implementação no aplicativo de forma a salvar os dados do programa a fins de calcular o progresso periódico do usuário.
        */ 
-      System.out.printf("Bem vindo ao Diabetech, seu aplicativo de monitoramento!\n");
+     /* System.out.printf("Bem vindo ao Diabetech, seu aplicativo de monitoramento!\n");
       System.out.printf("Nossa motivação é a sua preocupação.\n");
       System.out.printf("Carregando a tela de login...\n");
                  
@@ -70,7 +78,7 @@ class Main {
                     
             }
         } while(!choice.equals("4"));
-         
+        */ 
   }
   
   public static void usuarioLogado(){

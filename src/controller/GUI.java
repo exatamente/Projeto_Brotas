@@ -2,13 +2,19 @@
  * 
  */
 package controller;
+
+import view.Inicial;
+import view.Login;
+import view.cadastro;
+import view.fichaCadastro;
+
 /**
  * Classe GUI estende a classe Graficos.java contendo métodos para instanciar e manipular as janelas.
  * @author MatheusElias - coder
 */
 public class GUI{
-
-  GUI(){
+  
+  public GUI(){
     /*
     Ver.:0.4
     
@@ -21,25 +27,54 @@ public class GUI{
     */ 
 
   }
+  static Inicial telaInicial;
+  static cadastro telaCadastro;
+  static fichaCadastro telaFichaC;
+  static Login telaLogin;
 
+  public void renderScreen(int i){
+      if(i ==0){
+          telaInicial = new Inicial();
+          telaInicial.setVisible(true);
+      }
+      else if(i==1){
+          telaCadastro = new cadastro();
+          telaCadastro.setVisible(true);
+      }
+      else if (i==2){
+          telaFichaC = new fichaCadastro();
+          telaFichaC.setVisible(true);
+      }
+      else if (i==3){
+          telaLogin = new Login();
+          telaLogin.setVisible(true);
+      }
+  }
   
+    public void closeScreen(int i){
+      if(i ==0){
+          telaInicial.setVisible(false);
+      }
+      else if(i==1){
+          telaCadastro.setVisible(false);
+      }
+      else if (i==2){
+          telaFichaC.setVisible(false);
+      }
+      else if (i==3){
+          telaLogin.setVisible(false);
+      }
+  }
   
-  // INSERIR CRUD para operações basicas 
-
-  public void pegaDadosUser(){
-
-  }
-
-  public void lerDadosUser(){
-    
-  }
-
-  public void alteraDadosUser(){
-    
-  }
-
-  public void deletaDadosUser(){
-    
+  public void getInitialButtonPressed(int i){
+      if(i==1){
+          renderScreen(1);
+          closeScreen(0);
+      }
+      else if(i==2){
+          renderScreen(3);
+          closeScreen(0);
+      }
   }
 
 }
