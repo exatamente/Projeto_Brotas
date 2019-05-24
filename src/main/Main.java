@@ -20,9 +20,7 @@ import controller.GUI;
 import java.util.Scanner;
 
 class Main {
-  static String login;
-  static Scanner input = new Scanner(System.in);
-  static Database db = new Database();
+  
   static GUI GUI =  new GUI();
   public static void main(String[] args) {
     /**
@@ -81,7 +79,7 @@ class Main {
         */ 
   }
   
-  public static void usuarioLogado(){
+  /*public static void usuarioLogado(){
       System.out.println("Bem vindo "+ login + " .");
       String choice ;
       do{
@@ -118,6 +116,6 @@ class Main {
     System.out.println("2 -  Atualizar dados.\n");
     System.out.println("3 -  Mostrar dicas.\n");
     System.out.println("4 -  Sair.\n");
-  }
+  }*/
 }
 

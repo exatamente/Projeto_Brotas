@@ -3,6 +3,8 @@
  */
 package controller;
 
+import java.util.Scanner;
+import main.Database;
 import view.Inicial;
 import view.Login;
 import view.cadastro;
@@ -27,6 +29,8 @@ public class GUI{
     */ 
 
   }
+  static Scanner input = new Scanner(System.in);
+  static Database db = new Database();
   static Inicial telaInicial;
   static cadastro telaCadastro;
   static fichaCadastro telaFichaC;
@@ -74,6 +78,21 @@ public class GUI{
       else if(i==2){
           renderScreen(3);
           closeScreen(0);
+      }
+      else if(i==3){
+          
+      }
+      else if(i==4){
+          System.exit(0);
+      }
+  }
+  
+  public void searchLogin(String login){
+      if(db.procuraConta(login) != -1){
+          
+      }
+      else{
+          
       }
   }
 
